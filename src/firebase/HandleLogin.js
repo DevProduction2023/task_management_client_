@@ -8,7 +8,7 @@ import { doc, setDoc } from './AddList'
 const logInWithEmailAndPassword = async (email, password) => {
     try {
         console.log('Logging in with email:', email);
-        const res = await axios.post('http://localhost:5000/api/auth/login', {
+        const res = await axios.post('https://taskmanagement-ddfo.onrender.com/api/auth/login', {
             email: email,
             password: password
         },{
@@ -29,7 +29,7 @@ const logInWithEmailAndPassword = async (email, password) => {
 
 const registerWithEmailAndPassword = async ({ name, email, password }) => {
     try {
-        const res = await axios.post('http://localhost:5000/api/auth/register', {
+        const res = await axios.post('https://taskmanagement-ddfo.onrender.com/api/auth/register', {
             name: name,
             email: email,
             password: password
