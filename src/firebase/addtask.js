@@ -8,7 +8,7 @@ import axios from 'axios';
 const addTaskToTaskColumn = async ({listId, taskTitle, taskDes, DueDate, taskPriority }) => {
     try {
         console.log(" addtask: ", listId)
-        const addtask = await axios.post('http://localhost:5000/api/list/addtask', {
+        const addtask = await axios.post('https://taskmanagement-ddfo.onrender.com/api/list/addtask', {
             listId: listId,
             taskTitle: taskTitle,
             taskDes: taskDes,
