@@ -9,7 +9,7 @@ const fetchUserPlaylists = async () => {
         //     withCredentials: true,
         // });
 
-        const userList = await axios.post(`http://localhost:5000/api/list/lists`, {}, {
+        const userList = await axios.post(`https://taskmanagement-ddfo.onrender.com/api/list/lists`, {}, {
             withCredentials: true,
         });
 
@@ -32,7 +32,7 @@ const fetchUserPlaylists = async () => {
 
 const fetchTasksForPlaylist = async (listId) => {
     try {
-        const taskList = await axios.get(`http://localhost:5000/api/list/${listId}`, {
+        const taskList = await axios.get(`https://taskmanagement-ddfo.onrender.com/api/list/${listId}`, {
             withCredentials: true,
         });
 
@@ -110,7 +110,7 @@ const updatedragTodoList = async ({ listId, taskId, priority }) => {
         if (!listId || !taskId || !priority) {
            return ;
         }
-        const updatedList = await axios.post(`http://localhost:5000/api/list/${listId}/${taskId}`, {
+        const updatedList = await axios.post(`https://taskmanagement-ddfo.onrender.com/api/list/${listId}/${taskId}`, {
             priority: priority
         }, {
             withCredentials: true,
@@ -125,7 +125,7 @@ const updatedragTodoList = async ({ listId, taskId, priority }) => {
 const addTaskToTaskColumn = async ({listprevId, listNextId, taskId}) => {
     try {
         console.log("  addTaskToTaskColumn : ", listprevId, listNextId, taskId)
-        const addtask = await axios.put(`http://localhost:5000/api/list/tasktolist/${listprevId}/${listNextId}/${taskId}`, {}, {
+        const addtask = await axios.put(`https://taskmanagement-ddfo.onrender.com/api/list/tasktolist/${listprevId}/${listNextId}/${taskId}`, {}, {
             withCredentials: true,
         });
 
