@@ -24,7 +24,7 @@ import axios from 'axios'
 
 const addtodolistbyName = async (playlistTitle) => {
     try {
-        const AddNewList = await axios.post('http://localhost:5000/api/list/addlist', {
+        const AddNewList = await axios.post('https://taskmanagement-ddfo.onrender.com/api/list/addlist', {
             title: playlistTitle,
         }, {
             withCredentials: true,
